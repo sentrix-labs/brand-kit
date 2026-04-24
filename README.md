@@ -43,15 +43,15 @@ For the full brand guide, see [`BRAND_GUIDE.md`](BRAND_GUIDE.md).
 Use **jsDelivr** for fast, globally-cached delivery (recommended for exchange listings & integrations):
 
 ```
-https://cdn.jsdelivr.net/gh/sentrix-labs/brand-kit@main/png-transparent/sentrix-256.png
-https://cdn.jsdelivr.net/gh/sentrix-labs/brand-kit@main/exchange/coingecko-200.png
-https://cdn.jsdelivr.net/gh/sentrix-labs/brand-kit@main/svg/sentrix-logo-full.svg
+https://cdn.jsdelivr.net/gh/sentrix-labs/brand-kit@master/png-transparent/sentrix-256.png
+https://cdn.jsdelivr.net/gh/sentrix-labs/brand-kit@master/exchange/coingecko-200.png
+https://cdn.jsdelivr.net/gh/sentrix-labs/brand-kit@master/svg/sentrix-logo-full.svg
 ```
 
 Alternatively, GitHub raw URLs:
 
 ```
-https://raw.githubusercontent.com/sentrix-labs/brand-kit/main/png-transparent/sentrix-256.png
+https://raw.githubusercontent.com/sentrix-labs/brand-kit/master/png-transparent/sentrix-256.png
 ```
 
 ---
@@ -106,7 +106,7 @@ See [`LICENSE`](LICENSE). Assets may be used to refer to, link to, or integrate 
 - **Website:** [sentrixchain.com](https://sentrixchain.com)
 - **GitHub:** [@sentrix-labs](https://github.com/sentrix-labs)
 - **Developer:** [@satyakwok](https://github.com/satyakwok)
-- **Twitter / X:** [@satyakwok](https://x.com/satyakwok)
+- **Twitter / X:** [@sentrixchain](https://x.com/sentrixchain)
 
 ---
 
