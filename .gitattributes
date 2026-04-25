@@ -1,0 +1,11 @@
+# GitHub Linguist overrides — fix language stats for an asset-only repo.
+# By default linguist treats SVG as "data" and excludes it from stats,
+# leaving the lone html-head-snippet.html to show as 100% HTML.
+
+# Force SVG to count in the language stats (this is a brand-kit, SVGs
+# are the primary content).
+*.svg linguist-detectable=true
+
+# The favicon HTML snippet is documentation (copy-paste example for
+# integrators), not source code. Exclude from stats.
+favicon/html-head-snippet.html linguist-documentation
