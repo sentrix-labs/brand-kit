@@ -1,8 +1,9 @@
 # Sentrix Labs — Brand Kit
 
-Official brand assets for **Sentrix Labs** (parent org) and **Sentrix Chain** — an Indonesian Layer 1 Blockchain built in Rust.
+Official brand assets for **SentrisCloud** (company), **Sentrix Labs** (protocol foundation), and **Sentrix Chain** — an Indonesian Layer 1 Blockchain built in Rust.
 
 <p align="center">
+  <img src="png-transparent/sentriscloud-512.png" alt="SentrisCloud" width="180" style="margin-right: 24px;">
   <img src="png-transparent/sentrix-labs-512.png" alt="Sentrix Labs" width="180" style="margin-right: 24px;">
   <img src="png-full/sentrix-512.png" alt="Sentrix Chain" width="180">
 </p>
@@ -38,7 +39,18 @@ For the full brand guide, see [`BRAND_GUIDE.md`](BRAND_GUIDE.md).
 | **Profile picture variants** | [`avatars/`](avatars/) |
 | App store icons | [`app-icon/`](app-icon/) |
 
-### Sentrix Labs (parent org)
+### SentrisCloud (company)
+
+| Asset | Path |
+|-------|------|
+| SVG primary (emerald) | [`svg/sentriscloud-mark.svg`](svg/sentriscloud-mark.svg) |
+| SVG monochrome black | [`svg/sentriscloud-mark-mono-black.svg`](svg/sentriscloud-mark-mono-black.svg) |
+| SVG monochrome white | [`svg/sentriscloud-mark-mono-white.svg`](svg/sentriscloud-mark-mono-white.svg) |
+| Raster (transparent) | [`png-transparent/sentriscloud-512.png`](png-transparent/sentriscloud-512.png) |
+| Mono raster | [`mono/`](mono/) (`sentriscloud-black-*`, `sentriscloud-white-*`) |
+| GitHub org avatar | [`social/sentriscloud-github-500.png`](social/sentriscloud-github-500.png) |
+
+### Sentrix Labs (protocol foundation)
 
 | Asset | Path |
 |-------|------|
@@ -84,11 +96,11 @@ https://raw.githubusercontent.com/sentrix-labs/brand-kit/master/png-transparent/
 | Sentrix Gold | `#DBC17F` | 219, 193, 127 |
 | Deep Canvas | `#0A0A0C` | 10, 10, 12 |
 
-### Sentrix Labs
+### SentrisCloud + Sentrix Labs (shared family)
 
 | Name | Hex | RGB |
 |------|-----|-----|
-| Labs Emerald | `#10B981` | 16, 185, 129 |
+| Family Emerald | `#10B981` | 16, 185, 129 |
 
 ---
 
