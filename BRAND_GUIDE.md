@@ -1,6 +1,8 @@
-# Sentrix Chain — Brand Guide
+# Sentrix Labs — Brand Guide
 
-Official brand guidelines for **Sentrix Chain**, the Indonesian Layer 1 blockchain.
+Official brand guidelines for **Sentrix Labs** (parent org) and **Sentrix Chain** (the Indonesian Layer 1 blockchain).
+
+This repo houses two distinct brands. Most of this guide describes Sentrix Chain — see the [Sentrix Labs Mark](#sentrix-labs-mark) section below for the parent-org mark.
 
 **Generated:** April 2026
 **Owner:** Sentrix Labs
@@ -36,6 +38,39 @@ Sentrix Labs                    ← Parent company
 ```
 
 `FastPoint` and `GSC Patrol` are separate Sentrix Labs SaaS products — they do **not** fall under the Sentrix Chain brand umbrella.
+
+---
+
+## Sentrix Labs Mark
+
+The **Sentrix Labs** parent-org mark is distinct from the Sentrix Chain mark. Use the Labs mark on org-level surfaces (the `sentrix-labs` GitHub org page, parent-company communications, multi-product contexts). Use the Sentrix Chain mark for the L1 product itself.
+
+### Color
+
+| Name | Hex | Usage |
+|------|-----|-------|
+| Labs Emerald | `#10B981` | Primary mark color |
+
+This emerald sits intentionally outside the Sentrix Chain bronze/gold palette to keep the parent org visually distinct from the product.
+
+### Files
+
+| File | When to use |
+|------|-------------|
+| `svg/sentrix-labs-mark.svg` | Default Labs mark (emerald, transparent). |
+| `svg/sentrix-labs-mark-mono-black.svg` | All-black. Light backgrounds, print, embossing. |
+| `svg/sentrix-labs-mark-mono-white.svg` | All-white. Dark backgrounds, watermarks. |
+| `png-transparent/sentrix-labs-{16…4096}.png` | Raster renders, transparent BG. |
+| `mono/sentrix-labs-black-{256,512,1024}.png` | Mono black raster. |
+| `mono/sentrix-labs-white-{256,512,1024}.png` | Mono white raster. |
+| `social/labs-github-500.png` | GitHub org avatar (500×500). |
+
+### Usage Rules
+
+- **Org-level surfaces only.** GitHub org page, parent-company press, multi-product investor decks. For Sentrix Chain product surfaces (whitepaper, explorer, exchange listings), use the Sentrix Chain mark — not this one.
+- **Don't mix marks** in the same hero/header. Either Labs OR Chain, not both side-by-side as equals.
+- **Don't recolor** outside `#10B981` for the color variant.
+- **No app-icon, exchange, or favicon variants** — Labs is not a product, has no app, no token, and no dedicated marketing site.
 
 ---
 
@@ -110,15 +145,18 @@ brand-kit/
 ├── BRAND_GUIDE.md             ← This file
 │
 ├── svg/                       ← Master vector files
-│   ├── sentrix-logo-full.svg
-│   ├── sentrix-logo-transparent.svg
-│   ├── sentrix-logo-mono-black.svg
-│   ├── sentrix-logo-mono-white.svg
-│   └── sentrix-mark-tight.svg
+│   ├── sentrix-logo-full.svg              ← Sentrix Chain
+│   ├── sentrix-logo-transparent.svg       ← Sentrix Chain
+│   ├── sentrix-logo-mono-black.svg        ← Sentrix Chain
+│   ├── sentrix-logo-mono-white.svg        ← Sentrix Chain
+│   ├── sentrix-mark-tight.svg             ← Sentrix Chain
+│   ├── sentrix-labs-mark.svg              ← Sentrix Labs (parent)
+│   ├── sentrix-labs-mark-mono-black.svg   ← Sentrix Labs (parent)
+│   └── sentrix-labs-mark-mono-white.svg   ← Sentrix Labs (parent)
 │
-├── png-full/                  ← Full logo (with circle) — 16, 32, 64, 128, 256, 512, 1024, 2048, 4096
-├── png-transparent/           ← Transparent logo (no circle) — same sizes
-├── mono/                      ← Black & white variants — 256, 512, 1024
+├── png-full/                  ← Sentrix Chain full (with circle) — 16…4096
+├── png-transparent/           ← Sentrix Chain transparent + sentrix-labs-* — same sizes
+├── mono/                      ← Black & white — sentrix-* (Chain) + sentrix-labs-* (Labs) — 256, 512, 1024
 │
 ├── favicon/                   ← Complete web favicon set
 │   ├── favicon.ico            ← Multi-resolution 16/32/48/64

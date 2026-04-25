@@ -1,9 +1,10 @@
-# Sentrix Chain — Brand Kit
+# Sentrix Labs — Brand Kit
 
-Official brand assets for **Sentrix Chain** — an Indonesian Layer 1 Blockchain built in Rust.
+Official brand assets for **Sentrix Labs** (parent org) and **Sentrix Chain** — an Indonesian Layer 1 Blockchain built in Rust.
 
 <p align="center">
-  <img src="png-full/sentrix-512.png" alt="Sentrix Chain Logo" width="256">
+  <img src="png-transparent/sentrix-labs-512.png" alt="Sentrix Labs" width="180" style="margin-right: 24px;">
+  <img src="png-full/sentrix-512.png" alt="Sentrix Chain" width="180">
 </p>
 
 <p align="center">
@@ -23,6 +24,8 @@ For the full brand guide, see [`BRAND_GUIDE.md`](BRAND_GUIDE.md).
 
 ## Quick Links
 
+### Sentrix Chain (product)
+
 | Asset | Path |
 |-------|------|
 | SVG master (full, with circle) | [`svg/sentrix-logo-full.svg`](svg/sentrix-logo-full.svg) |
@@ -34,6 +37,20 @@ For the full brand guide, see [`BRAND_GUIDE.md`](BRAND_GUIDE.md).
 | Social media kit | [`social/`](social/) |
 | **Profile picture variants** | [`avatars/`](avatars/) |
 | App store icons | [`app-icon/`](app-icon/) |
+
+### Sentrix Labs (parent org)
+
+| Asset | Path |
+|-------|------|
+| SVG primary (emerald) | [`svg/sentrix-labs-mark.svg`](svg/sentrix-labs-mark.svg) |
+| SVG monochrome black | [`svg/sentrix-labs-mark-mono-black.svg`](svg/sentrix-labs-mark-mono-black.svg) |
+| SVG monochrome white | [`svg/sentrix-labs-mark-mono-white.svg`](svg/sentrix-labs-mark-mono-white.svg) |
+| Raster (transparent) | [`png-transparent/sentrix-labs-512.png`](png-transparent/sentrix-labs-512.png) |
+| Mono raster | [`mono/`](mono/) (`sentrix-labs-black-*`, `sentrix-labs-white-*`) |
+| GitHub org avatar | [`social/labs-github-500.png`](social/labs-github-500.png) |
+
+| | |
+|-------|------|
 | **Full Brand Guide** | [`BRAND_GUIDE.md`](BRAND_GUIDE.md) |
 
 ---
@@ -58,12 +75,20 @@ https://raw.githubusercontent.com/sentrix-labs/brand-kit/master/png-transparent/
 
 ## Color Palette
 
+### Sentrix Chain
+
 | Name | Hex | RGB |
 |------|-----|-----|
 | Sentrix Black | `#000000` | 0, 0, 0 |
 | Sentrix Bronze | `#8A5A11` | 138, 90, 17 |
 | Sentrix Gold | `#DBC17F` | 219, 193, 127 |
 | Deep Canvas | `#0A0A0C` | 10, 10, 12 |
+
+### Sentrix Labs
+
+| Name | Hex | RGB |
+|------|-----|-----|
+| Labs Emerald | `#10B981` | 16, 185, 129 |
 
 ---
 
@@ -110,4 +135,4 @@ See [`LICENSE`](LICENSE). Assets may be used to refer to, link to, or integrate 
 
 ---
 
-*Sentrix Chain is a trademark of Sentrix Labs. All rights reserved.*
+*Sentrix Labs and Sentrix Chain are trademarks of Sentrix Labs. All rights reserved.*
