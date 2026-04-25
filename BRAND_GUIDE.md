@@ -1,8 +1,8 @@
 # Sentrix Labs — Brand Guide
 
-Official brand guidelines for **Sentrix Labs** (parent org) and **Sentrix Chain** (the Indonesian Layer 1 blockchain).
+Official brand guidelines for the **SentrisCloud** family: the company brand, the **Sentrix Labs** protocol foundation, and the **Sentrix Chain** Layer 1 blockchain.
 
-This repo houses two distinct brands. Most of this guide describes Sentrix Chain — see the [Sentrix Labs Mark](#sentrix-labs-mark) section below for the parent-org mark.
+This repo houses three distinct brands. Most of this guide describes Sentrix Chain — see the [SentrisCloud Mark](#sentriscloud-mark) and [Sentrix Labs Mark](#sentrix-labs-mark) sections below for the company and foundation marks.
 
 **Generated:** April 2026
 **Owner:** Sentrix Labs
@@ -29,21 +29,64 @@ The Indonesian L1 Blockchain
 
 ### Brand Hierarchy
 ```
-Sentrix Labs                    ← Parent company
+SentrisCloud                    ← Company / consumer-facing brand
 │
-└── Sentrix Chain               ← L1 blockchain (this brand kit)
-    ├── Sentrix Scan            ← Block explorer
-    ├── Sentrix SDK             ← Developer toolkit
-    └── [future products...]
+├── Sentrix Labs                ← Protocol foundation (sentrix-labs GitHub org)
+│   └── Sentrix Chain           ← L1 blockchain (the protocol product)
+│       ├── Sentrix SDK         ← Developer toolkit
+│       └── [future protocol primitives...]
+│
+└── Products (sentriscloud GitHub org)
+    ├── SentrixScan             ← Block explorer
+    ├── Sentrix Wallet          ← Web + mobile wallet
+    ├── Sentrix Faucet          ← Testnet token faucet
+    └── CoinBlast               ← DEX + launchpad
 ```
 
-`FastPoint` and `GSC Patrol` are separate Sentrix Labs SaaS products — they do **not** fall under the Sentrix Chain brand umbrella.
+`FastPoint` and `GSC Patrol` are separate SentrisCloud-adjacent products — they do **not** fall under the Sentrix Chain brand umbrella.
+
+---
+
+## SentrisCloud Mark
+
+The **SentrisCloud** company mark is the consumer-facing parent identity. Use it on company surfaces (`sentriscloud.com`, the `sentriscloud` GitHub org, multi-product investor decks, hiring pages). Use the Sentrix Labs mark for protocol-foundation surfaces, and the Sentrix Chain mark for the L1 product.
+
+### Color
+
+| Name | Hex | Usage |
+|------|-----|-------|
+| Family Emerald | `#10B981` | Shared with Sentrix Labs — same parent color, different geometry |
+
+SentrisCloud and Sentrix Labs share the emerald family color to signal they belong to the same parent system. Sentrix Chain stays bronze/gold to mark it as a distinct product.
+
+### Files
+
+| File | When to use |
+|------|-------------|
+| `svg/sentriscloud-mark.svg` | Default mark (emerald, transparent). |
+| `svg/sentriscloud-mark-mono-black.svg` | All-black. Light backgrounds, print, embossing. |
+| `svg/sentriscloud-mark-mono-white.svg` | All-white. Dark backgrounds, watermarks. |
+| `png-transparent/sentriscloud-{16…4096}.png` | Raster renders, transparent BG. |
+| `mono/sentriscloud-black-{256,512,1024}.png` | Mono black raster. |
+| `mono/sentriscloud-white-{256,512,1024}.png` | Mono white raster. |
+| `social/sentriscloud-github-500.png` | GitHub org avatar (500×500). |
+
+### Symbolism
+
+Five emerald dots in a quincunx (cross) pattern — a cluster of products radiating from a central platform. Reads as "SentrisCloud is the platform that holds the products," contrasting with Sentrix Labs (horizontal bars / infrastructure stack) and Sentrix Chain (diamond / validator network).
+
+### Usage Rules
+
+- **Company-level surfaces only.** Use on `sentriscloud.com`, the `sentriscloud` GitHub org, company press, investor decks. For protocol-org surfaces use Sentrix Labs; for product surfaces (whitepaper, explorer) use Sentrix Chain.
+- **Don't mix marks** in the same hero/header. Pick one based on which entity is speaking.
+- **Don't recolor** outside `#10B981` for the color variant.
+- **Same shape language family.** Both SentrisCloud and Sentrix Labs use the same emerald — geometry differentiates them, color unifies them.
 
 ---
 
 ## Sentrix Labs Mark
 
-The **Sentrix Labs** parent-org mark is distinct from the Sentrix Chain mark. Use the Labs mark on org-level surfaces (the `sentrix-labs` GitHub org page, parent-company communications, multi-product contexts). Use the Sentrix Chain mark for the L1 product itself.
+The **Sentrix Labs** mark identifies the protocol foundation — the `sentrix-labs` GitHub org and protocol-level communications (whitepaper, RFCs, foundation announcements). Use the SentrisCloud mark for company-level surfaces, and the Sentrix Chain mark for the L1 product itself.
 
 ### Color
 
@@ -67,8 +110,8 @@ This emerald sits intentionally outside the Sentrix Chain bronze/gold palette to
 
 ### Usage Rules
 
-- **Org-level surfaces only.** GitHub org page, parent-company press, multi-product investor decks. For Sentrix Chain product surfaces (whitepaper, explorer, exchange listings), use the Sentrix Chain mark — not this one.
-- **Don't mix marks** in the same hero/header. Either Labs OR Chain, not both side-by-side as equals.
+- **Protocol-foundation surfaces only.** `sentrix-labs` GitHub org page, whitepaper, RFCs, foundation press. For company surfaces use the SentrisCloud mark; for L1 product surfaces (explorer, exchange listings) use the Sentrix Chain mark.
+- **Don't mix marks** in the same hero/header. Pick one based on which entity is speaking.
 - **Don't recolor** outside `#10B981` for the color variant.
 - **No app-icon, exchange, or favicon variants** — Labs is not a product, has no app, no token, and no dedicated marketing site.
 
@@ -150,13 +193,16 @@ brand-kit/
 │   ├── sentrix-logo-mono-black.svg        ← Sentrix Chain
 │   ├── sentrix-logo-mono-white.svg        ← Sentrix Chain
 │   ├── sentrix-mark-tight.svg             ← Sentrix Chain
-│   ├── sentrix-labs-mark.svg              ← Sentrix Labs (parent)
-│   ├── sentrix-labs-mark-mono-black.svg   ← Sentrix Labs (parent)
-│   └── sentrix-labs-mark-mono-white.svg   ← Sentrix Labs (parent)
+│   ├── sentriscloud-mark.svg              ← SentrisCloud (company)
+│   ├── sentriscloud-mark-mono-black.svg   ← SentrisCloud (company)
+│   ├── sentriscloud-mark-mono-white.svg   ← SentrisCloud (company)
+│   ├── sentrix-labs-mark.svg              ← Sentrix Labs (foundation)
+│   ├── sentrix-labs-mark-mono-black.svg   ← Sentrix Labs (foundation)
+│   └── sentrix-labs-mark-mono-white.svg   ← Sentrix Labs (foundation)
 │
 ├── png-full/                  ← Sentrix Chain full (with circle) — 16…4096
-├── png-transparent/           ← Sentrix Chain transparent + sentrix-labs-* — same sizes
-├── mono/                      ← Black & white — sentrix-* (Chain) + sentrix-labs-* (Labs) — 256, 512, 1024
+├── png-transparent/           ← Sentrix Chain transparent + sentriscloud-* + sentrix-labs-* — same sizes
+├── mono/                      ← Black & white — sentrix-*, sentriscloud-*, sentrix-labs-* — 256, 512, 1024
 │
 ├── favicon/                   ← Complete web favicon set
 │   ├── favicon.ico            ← Multi-resolution 16/32/48/64
