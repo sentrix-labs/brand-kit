@@ -31,13 +31,10 @@ For the full brand guide, see [`BRAND_GUIDE.md`](BRAND_GUIDE.md).
 
 | Asset | Path |
 |-------|------|
-| **Header mark — primary for nav, footer, chrome** | [`svg/sentrix-mark-header.svg`](svg/sentrix-mark-header.svg) |
-| Header mark — mono black (light bg) | [`svg/sentrix-mark-header-mono-black.svg`](svg/sentrix-mark-header-mono-black.svg) |
-| Header mark — mono white (dark bg overlay) | [`svg/sentrix-mark-header-mono-white.svg`](svg/sentrix-mark-header-mono-white.svg) |
-| SVG master (full, with circle) — hero only | [`svg/sentrix-logo-full.svg`](svg/sentrix-logo-full.svg) |
-| SVG transparent (no circle) — hero only | [`svg/sentrix-logo-transparent.svg`](svg/sentrix-logo-transparent.svg) |
-| SVG monochrome black — hero | [`svg/sentrix-logo-mono-black.svg`](svg/sentrix-logo-mono-black.svg) |
-| SVG monochrome white — hero | [`svg/sentrix-logo-mono-white.svg`](svg/sentrix-logo-mono-white.svg) |
+| SVG master (full, with circle) | [`svg/sentrix-logo-full.svg`](svg/sentrix-logo-full.svg) |
+| SVG transparent (no circle) | [`svg/sentrix-logo-transparent.svg`](svg/sentrix-logo-transparent.svg) |
+| SVG monochrome black | [`svg/sentrix-logo-mono-black.svg`](svg/sentrix-logo-mono-black.svg) |
+| SVG monochrome white | [`svg/sentrix-logo-mono-white.svg`](svg/sentrix-logo-mono-white.svg) |
 | Favicon set | [`favicon/`](favicon/) |
 | Exchange listing icons | [`exchange/`](exchange/) |
 | Social media kit | [`social/`](social/) |
