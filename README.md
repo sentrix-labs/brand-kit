@@ -10,6 +10,8 @@ Official brand assets for **SentrisCloud** (company), **Sentrix Labs** (protocol
 
 <p align="center">
   <a href="https://sentrixchain.com"><img src="https://img.shields.io/badge/website-sentrixchain.com-8A5A11" alt="Website"></a>
+  <a href="BRAND_GUIDE.md"><img src="https://img.shields.io/badge/brand%20guide-DBC17F?labelColor=000" alt="Brand Guide"></a>
+  <a href="USAGE.md"><img src="https://img.shields.io/badge/usage-DBC17F?labelColor=000" alt="Usage"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-proprietary-black" alt="License"></a>
 </p>
 
