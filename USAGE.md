@@ -1,91 +1,127 @@
-# Sentrix Brand — Usage
+# Sentrix Brand — Usage Guide
 
-Practical reference for picking the right asset per surface. See `BRAND_GUIDE.md` for the underlying design system; this doc is the cheat-sheet.
+How to pick the right logo asset for any surface. This is the practical cheat-sheet — see `BRAND_GUIDE.md` for the underlying design system (palette, typography, clear-space).
 
-## Logo hierarchy
+If you take nothing else from this doc:
 
-The Sentrix mark has three visual contexts plus a favicon track. Pick by surface, not by preference — using the wrong variant in the wrong place is the most common brand inconsistency.
+> **For nav, footer, and chrome that pairs the mark with a wordmark, use `svg/sentrix-mark-header.svg`.**
+> **For coin/asset stamps (wallet balance, faucet hero), use `avatars/solid-bronze-gold/`.**
+> Everything else is variations on those two.
 
-| Context | Mark | Wordmark | When |
-|---|---|---|---|
-| **1. Default / brand** | Ring + diamond + 4 pearl dots (`avatars/single-ring-transparent/*.png`) | `SENTRIX` serif uppercase, minimal letter-spacing (≤ 0.05em), font-light | Top navigation, footer, anywhere the mark sits next to a wordmark. The pearl-dots circle is the signature element — strip it and the diamond reads as a generic rotated square. |
-| **2. Hero / display** | Same as default (ring + dots) | Wordmark scales up: serif uppercase, larger letter-spacing OK, font-light or font-normal | Landing hero, splash screens, social cards. Hero context has room for wider tracking. |
-| **3. Asset / value stamp** | Solid bronze coin face (`avatars/solid-bronze-gold/*.png`) | (none — used inline alongside numeric value) | Wallet balance pucks, faucet hero coin, asset cards. Reads as a "coin" stamp — heavier visual weight than the ring. |
-| **4. Favicon / app icon** | Pre-rasterized mark (`favicon/`, `app-icon/`) | n/a | Browser tabs, home screen, app launcher. Don't generate from SVG — the rasterizer blows out 11px-radius pearl dots. |
+## At a glance — pick by surface
 
-The ring + pearl dots is the brand signature. Strip it only when there's a real legibility problem at < 24px — and even then, prefer raising the size to recovering the brand.
+| Surface | Asset | Why |
+|---|---|---|
+| Web nav (top bar) | `svg/sentrix-mark-header.svg` | Diamond + 4 pearl dots, no ring, no disc. Pearl dots survive at 32-56px display. |
+| Footer | `svg/sentrix-mark-header.svg` (smaller size) | Same asset, just `size={22-28}` |
+| App shell / breadcrumb | `svg/sentrix-mark-header.svg` | Same |
+| Hero coin / wallet balance | `avatars/solid-bronze-gold/avatar-solid-bronze-gold-512.png` | Solid bronze coin with gold diamond. Reads as a "coin" stamp. |
+| Faucet hero, asset cards | `avatars/solid-bronze-gold/*.png` | Same family |
+| Big editorial moment (landing splash, social card) | `svg/sentrix-mark-header.svg` at 96-200px **OR** `avatars/single-ring-transparent/*.png` if you want the framed-coin look | Either works at hero size. The header SVG keeps the brand silhouette clean; the ring adds a "framed" feel. |
+| Browser favicon | `favicon/favicon-{16,32}.png`, `favicon.ico` | Pre-rasterized, do NOT generate from SVG |
+| iOS home screen | `app-icon/ios-appstore-1024.png` (or `favicon/apple-touch-icon.png`) | Pre-baked |
+| Android home screen | `app-icon/android-playstore-512.png` + adaptive `android-adaptive-{foreground,background}-432.png` | Pre-baked |
+| Twitter / X profile pic | `avatars/single-ring-transparent/*-1024.png` (light mode) or `single-ring-black/*-1024.png` (dark) | Per `avatars/README.md` recommendations |
+| Discord, Telegram avatar | `avatars/single-ring-transparent/*-1024.png` | Same |
+| Exchange listings (CoinGecko, CMC, Trust Wallet) | `exchange/coingecko-200.png`, `exchange/coinmarketcap-200.png`, `exchange/trustwallet-256.png` | Pre-cropped per platform spec |
+| Print, future-proof | `avatars/*/avatar-*-2048.png` | Highest raster |
 
-## 1. Default / nav / footer
+## Wordmark pairing — the canonical rule
 
-**Mark:** `avatars/single-ring-transparent/avatar-single-ring-transparent-{128,256,512}.png`
+When the mark sits next to a Sentrix wordmark (nav, footer, hero):
 
-Bronze ring + bronze diamond + 4 gold pearl dots, transparent background. The PNGs are pre-rasterized at each size with proportions that hold up — pearl dots stay visible from 32px up.
+| Property | Value | Reason |
+|---|---|---|
+| Casing | `SENTRIX` (all caps) | Matches the iconic mark's formality. Mixed-case "Sentrix" undersells it. |
+| Font family | Serif (Playfair Display in product apps) | Matches the editorial brand voice. |
+| Letter-spacing | `tracking-[.04em]` for nav, up to `tracking-[.05em]` at hero size | Minimal — wide tracking (`.25em`+) reads as a section eyebrow, not a brand mark. |
+| Weight | font-light (300) or font-normal (400) | Mark already carries visual weight; wordmark stays restrained. |
+| Color | brand gold (`var(--gold)` / `#8A5A11`-ish) | Single color. No multi-color X accents. |
+| Cap-height | ~60% of mark height | Mark visually slightly larger than the wordmark caps; vertically centered via `flex items-center`. |
 
-**Wordmark:** `SENTRIX` all caps, serif (Playfair or the brand serif), letter-spacing ≤ 0.05em (NOT the wide editorial 0.25em — that reads as a section eyebrow, not a brand mark, in a nav context), font-weight 300-400 (light to normal), color brand gold.
-
-**Sizing — mark slightly larger than wordmark cap-height for visual balance:**
-- Desktop nav: mark 36-40px, wordmark 20-24px serif at `font-light`
-- Mobile nav: mark 32-36px, wordmark 18-22px
-- Footer: mark 26-30px, wordmark 14-18px (same family, smaller)
-- Gap mark↔wordmark: 10-14px (`gap-2.5` or `gap-3` in Tailwind)
-- Container: `flex items-center` — visual centers align cleanly because the mark is round-ish (ring) and the text is centered within its line-box
+**Reference (canonical):**
 
 ```tsx
-// Reference: apps/chain-landing/src/components/sections/navbar.tsx
-<a href="#" className="flex items-center gap-3 text-[var(--gold)]">
-  <SentrixLogo size={38} />
-  <span className="font-serif text-[22px] font-light tracking-[.04em] uppercase text-[var(--gold)] leading-none">
+<a href="/" className="flex items-center gap-3 text-[var(--gold)]">
+  <SentrixLogo size={36} />
+  <span className="font-serif text-[22px] font-light tracking-[.04em] uppercase leading-none">
     SENTRIX
   </span>
 </a>
 ```
 
-## 2. Hero / display
+## Logo asset map (every Sentrix Chain file in this repo)
 
-Same mark, scaled to 96-200px+. Wordmark in the surrounding hero composition can use wider letter-spacing (up to 0.15em) because the larger font size gives the wide tracking room to breathe without losing legibility.
+### SVG masters (`svg/`)
 
-The constraint is the OPPOSITE of nav: the ring + pearl dots want air around them. A hero context delivers that air.
+| File | What's in it | Use |
+|---|---|---|
+| **`sentrix-mark-header.svg`** | Diamond outline + filled inner diamond + 4 gold pearl dots (r=13 — sized for headers). No ring, no disc, transparent bg. | **Primary asset for all nav/footer/chrome.** |
+| `sentrix-mark-header-mono-black.svg` | Same composition, all black | Light-bg surfaces (printed material, light theme nav) |
+| `sentrix-mark-header-mono-white.svg` | Same composition, all white | Dark photography/video overlays where bronze reads too low contrast |
+| `sentrix-mark-tight.svg` | Tight crop of the diamond + 4 pearl dots (r=11 — sized for hero, dots vanish below ~96px) | Hero only. Don't reach for it in nav. |
+| `sentrix-logo-transparent.svg` | Same as tight but with viewBox padding | Hero only. |
+| `sentrix-logo-full.svg` | Diamond + dots inside a SOLID BLACK CIRCLE | Stamp-on-light-bg hero. The black circle is a deliberate framing device, not a "ring outline". |
+| `sentrix-logo-mono-black.svg` | Tight diamond + dots, all black, transparent bg | Light-bg hero |
+| `sentrix-logo-mono-white.svg` | Tight diamond + dots, all white, transparent bg | Dark-bg hero |
+| `sentrix-avatar-zoomed.svg` | Larger diamond + dots inside full black circle (r=512 fills viewBox) | Avatar contexts where a strong frame is wanted |
 
-## 3. Asset / value stamp
+### PNG avatars (`avatars/`)
 
-**Use:** `avatars/solid-bronze-gold/avatar-solid-bronze-gold-{256,512,1024}.png`
+Each variant is rendered at 32 / 64 / 128 / 180 / 192 / 256 / 400 / 512 / 1024 / 2048 px. Use the size closest to your render dimension and let the browser scale up only when necessary.
 
-Solid bronze disc with gold diamond. No ring, no pearl dots. Heavier visual weight than the brand variant — meant to read as a "coin" stamp in product UI (wallet balances, faucet hero coin, asset cards), not as a brand logo-mark.
+| Variant | Composition | Suggested use |
+|---|---|---|
+| **`solid-bronze-gold/`** | Solid bronze disc + gold diamond + pearl dots. No ring outline. | **Primary "coin" stamp** — wallet balance pucks, faucet hero coin, asset cards. |
+| `single-ring-transparent/` | Bronze ring (outer circle outline) + diamond + pearl dots, transparent bg | Avatars where a framed look is wanted on overlays |
+| `single-ring-black/` | Same but on solid black bg | Twitter/Discord avatars (dark theme) |
+| `single-ring-ivory/` | Same but on solid ivory bg | Print, light-theme avatars |
+| `double-ring-black/` | Gold outer + bronze inner double-ring + diamond + dots, black bg | Premium "coin" feel for exchange listings, big avatars |
+| `double-ring-ivory/` | Same on ivory | Print, premium light contexts |
+| `solid-black/` | Solid black disc + diamond + dots | Avatars on light backgrounds where you want strong contrast |
+| `solid-ivory/` | Solid ivory disc + diamond + dots | Avatars on dark backgrounds |
 
-Ring vs solid split:
-- **Ring** (variants 1 + 2) = brand identity. Recognition.
-- **Solid** (variant 3) = asset/value. Presence.
+The "ring" in `*-ring-*` variants refers to a **circular outline** stroked around the diamond. If you want diamond + dots WITHOUT any circular framing, use `svg/sentrix-mark-header.svg` (the SVG renders cleanly at every size, no rasterizer artifacts).
 
-Don't mix — the solid variant in nav chrome reads as heavy and confused with content; the ring variant on a wallet balance feels thin and decorative.
+### Other folders
 
-## 4. Favicon / app icon
+| Folder | What's in it | Use |
+|---|---|---|
+| `favicon/` | favicon.ico, favicon-{16,32}.png, apple-touch-icon, android-chrome-{192,512}, mstile-150, safari-pinned-tab.svg, html-head-snippet.html, site.webmanifest | Web favicon set. Drop the snippet into `<head>`. |
+| `app-icon/` | iOS App Store 1024, Android Play Store 512, Android adaptive bg+fg 432 | Mobile app submissions. |
+| `mono/` | Tight diamond+dots renders in pure black or pure white at 256/512/1024 | Printed material, single-color contexts |
+| `png-full/` | `sentrix-{16…4096}.png` — diamond+dots inside black circle, multiple sizes | Where the framed look is wanted but you can't ship SVG |
+| `png-transparent/` | `sentrix-{16…4096}.png` — diamond+dots transparent bg, multiple sizes | Tight-crop diamond on transparent (raster fallback for the SVG header mark) |
+| `social/` | x-banners, x-avatars, GitHub avatars | Pre-cropped for social platforms |
+| `exchange/` | coingecko-200, coinmarketcap-{32,200}, listing-full-512, tokenlist-{32,128,256}, trustwallet-256 | Exchange + token-list submissions, pre-cropped |
 
-`favicon/` and `app-icon/` are pre-baked at standard sizes. Don't generate from SVG at runtime — the rasterizer in design tools blows out the 11px-radius pearl dots and you get the "polos" (bare) diamond problem.
+## Sub-brands
 
-## Compact-only fallback (rarely used)
+The brand-kit also ships marks for **SentrisCloud** (the parent company) and **Sentrix Labs** (the protocol foundation). These follow the same rules but use their own marks (see `svg/sentriscloud-mark.svg`, `svg/sentrix-labs-mark.svg`). Don't pair the Sentrix Chain mark with a SentrisCloud or Labs wordmark — each brand owns its own pairing.
 
-`svg/sentrix-mark-header.svg` is a stripped dual-diamond — no ring, no pearl dots — for ultra-compact contexts (≤ 20px display) where the pearl dots really can't fit. It exists as a fallback option, not a default. If you find yourself reaching for it, first try raising the surrounding size — the pearl-dots PNG is the brand mark, the stripped diamond is a substitute.
+Sub-products of Sentrix Chain (faucet, scan, solux, coinblast) typically pair their own product wordmark with the Sentrix Chain mark. The exception is when a sub-product has its OWN visual identity (e.g., CoinBlast has a rocket motif) — in that case, the sub-product gets its own mark and the Sentrix Chain mark stays on the parent surfaces only.
 
 ## Don't
 
-- Don't recolor outside palette (`#8A5A11` bronze, `#DBC17F` gold, `#000000` black)
-- Don't add drop-shadow, glow, or gradient overlays to the mark
-- Don't stretch (preserve square aspect)
-- Don't place the ring variant on a busy/photo background — it needs flat dark canvas
-- Don't use `svg/sentrix-mark-tight.svg` at < 96px display size — pearl dots disappear (use the PNG variants instead)
-- Don't pair the brand mark with the wordmark wide-tracked (`tracking-[.25em]`+) in a horizontal nav — the wide tracking belongs in hero, not chrome
-- Don't pair the brand mark with mixed-case "Sentrix" wordmark — the mark is iconic, the wordmark should match its formality with `SENTRIX` all-caps
+- Don't recolor outside the palette (`#8A5A11` bronze, `#DBC17F` gold, `#000000` black, `#FFFFFF` white). The mono variants are the only single-color renders.
+- Don't add drop-shadow, glow, or gradient overlays.
+- Don't stretch — preserve square aspect.
+- Don't use `svg/sentrix-mark-tight.svg` or any of the `sentrix-logo-*` files at < 96px display. Their pearl dots vanish. Use `sentrix-mark-header.svg` (header-tuned dot radius) at smaller sizes.
+- Don't pair the mark with a wide-tracked uppercase wordmark in nav chrome (`tracking-[.25em]` reads as a section eyebrow). Save wide tracking for hero size where there's room for it to breathe.
+- Don't pair the mark with mixed-case "Sentrix" wordmark — the mark is iconic, the wordmark should match.
+- Don't add a circular background (ring or solid disc) around the header mark unless you're specifically going for the "framed coin" hero look — the bare diamond is the brand silhouette.
+- Don't generate favicons from any SVG at runtime. Use the pre-rasterized `favicon/` set — runtime rasterizers blow out small dots.
 
-## Reference implementations
+## Live reference implementations
 
-Surfaces to match when building new product chrome:
+Surfaces shipping in production. Match these when building new product chrome.
 
 | Surface | Mark | Wordmark | Notes |
 |---|---|---|---|
-| sentrixchain.com nav | ring @ 38px | `SENTRIX` Playfair 22px font-light tracking-[.04em] | Default brand chrome |
-| sentrixchain.com hero | (no inline mark — wordmark only) | `SENTRIX` Playfair 96px font-light tracking-[.05em] uppercase | Editorial display |
-| sentrixchain.com footer | ring @ 28px | `SENTRIX` Playfair 16px font-light tracking-[.04em] | Smaller proportional version of nav |
-| scan.sentrixchain.com nav | ring @ 32px | `SENTRIX` Playfair 18px font-light + sans `Scan` subtitle | Sub-brand pattern |
-| faucet.sentrixchain.com hero | solid @ 96px | `Sentrix Faucet` Playfair 44px tracking-tight | Hero context, solid coin stamp |
-| solux.sentriscloud.com balance | solid @ inline | inline alongside SRX numeric | Asset stamp |
-| explorer asset cards | ring @ 24px | inline alongside ticker | Compact data row |
+| sentrixchain.com nav | `sentrix-mark-header.svg` @ 36px | `SENTRIX` Playfair 22px font-light tracking-[.04em] uppercase | Default brand chrome |
+| sentrixchain.com footer | `sentrix-mark-header.svg` @ 26px | `SENTRIX` Playfair 16px font-light tracking-[.04em] | Smaller proportional version of nav |
+| sentrixchain.com hero (in-page) | (no inline mark — wordmark only) | `SENTRIX` Playfair 96px font-light tracking-[.05em] | Editorial display |
+| scan.sentrixchain.com nav | `sentrix-mark-header.svg` @ 32px | `SENTRIX` Playfair 18px font-light + sans `Scan` subtitle | Sub-brand pattern |
+| faucet.sentrixchain.com hero | `solid-bronze-gold` @ 96px | `Sentrix Faucet` Playfair 44px tracking-tight | Hero coin context |
+| solux.sentriscloud.com balance puck | `solid-bronze-gold` @ inline | (no wordmark — paired with SRX numeric) | Asset value stamp |
+| coinblast.sentrixchain.com nav | (sub-brand — rocket motif, not the Sentrix Chain mark) | `CoinBlast` | Intentional separate identity |
