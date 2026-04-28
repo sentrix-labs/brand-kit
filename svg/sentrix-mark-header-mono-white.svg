@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Header mark — monochrome white variant for dark backgrounds where
+  bronze/gold reads too low contrast (dense photography, video).
+  Same proportions as sentrix-mark-header.svg.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" shape-rendering="geometricPrecision">
+  <polygon points="100,10 190,100 100,190 10,100" fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linejoin="miter" stroke-miterlimit="10"/>
+  <polygon points="100,60 140,100 100,140 60,100" fill="#FFFFFF"/>
+  <circle cx="100" cy="10" r="13" fill="#FFFFFF"/>
+  <circle cx="190" cy="100" r="13" fill="#FFFFFF"/>
+  <circle cx="100" cy="190" r="13" fill="#FFFFFF"/>
+  <circle cx="10" cy="100" r="13" fill="#FFFFFF"/>
+</svg>
