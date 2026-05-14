@@ -1,6 +1,6 @@
 # Sentrix Labs — Brand Kit
 
-Official brand assets for **SentrisCloud** (company), **Sentrix Labs** (protocol foundation), and **Sentrix Chain** — an Indonesian Layer 1 Blockchain built in Rust.
+Official brand assets for **SentrisCloud** (company), **Sentrix Labs** (protocol foundation), and **Sentrix Chain** — an open source EVM L1 in Rust.
 
 <p align="center">
   <img src="png-transparent/sentriscloud-512.png" alt="SentrisCloud" width="180" style="margin-right: 24px;">
@@ -114,7 +114,7 @@ When referring to the project, use:
 
 - **"Sentrix Chain"** — official name of the L1 blockchain (use in formal contexts: whitepapers, exchange listings, legal documents, press releases)
 - **"Sentrix"** — acceptable shorthand in casual contexts (Twitter, Discord, community chat)
-- **"Sentrix Chain — Indonesian L1 Blockchain"** — full disambiguation for first mention in external media
+- **"Sentrix Chain — open source EVM L1 in Rust"** — full disambiguation for first mention in external media
 
 Product naming follows a consistent pattern:
 
